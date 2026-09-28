@@ -1,0 +1,336 @@
+/* =========================
+   NAVBAR
+========================= */
+
+.top-navbar {
+  height: 72px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  border-bottom: 1px solid #eeeeee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* =========================
+   LEFT
+========================= */
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #343c6a;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.brand-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(10, 31, 220);
+  border-radius: 9px;
+  font-size: 25px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu-button {
+  display: none;
+  border: none;
+  background: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   RIGHT
+========================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.search-box {
+  width: 230px;
+  height: 40px;
+  background: #f5f6fa;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  color: #777;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.search-box input::placeholder {
+  color: #999;
+}
+
+.icon-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #f5f6fa;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.profile-image {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e7e7ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #343c6a;
+  font-size: 18px;
+}
+
+
+/* =========================
+   TABLET - 1024px
+========================= */
+
+@media (max-width: 1024px) {
+
+  .top-navbar {
+    height: 68px;
+    padding: 0 20px;
+  }
+
+  .navbar-left {
+    gap: 12px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .brand-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar-actions {
+    gap: 12px;
+  }
+
+  .search-box {
+    width: 190px;
+  }
+
+  .icon-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .profile-image {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+
+/* =========================
+   TABLET / SMALL LAPTOP
+   768px
+========================= */
+
+@media (max-width: 768px) {
+
+  .top-navbar {
+    padding: 0 16px;
+  }
+
+  /* Show hamburger */
+
+  .menu-button {
+    display: flex;
+    width: 38px;
+    height: 38px;
+    font-size: 22px;
+  }
+
+  .navbar-left {
+    gap: 8px;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .search-box {
+    width: 160px;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   600px
+========================= */
+
+@media (max-width: 600px) {
+
+  .top-navbar {
+    height: 64px;
+    padding: 0 14px;
+  }
+
+  /* LEFT */
+
+  .navbar-left {
+    gap: 6px;
+  }
+
+  .menu-button {
+    width: 36px;
+    height: 36px;
+    font-size: 21px;
+  }
+
+  .brand {
+    font-size: 17px;
+    gap: 6px;
+  }
+
+  .brand-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+  }
+
+  /* RIGHT */
+
+  .navbar-actions {
+    gap: 7px;
+  }
+
+  /* Search becomes icon */
+
+  .search-box {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .search-box input {
+    display: none;
+  }
+
+  .search-box svg {
+    font-size: 17px;
+  }
+
+  .icon-button {
+    width: 38px;
+    height: 38px;
+    font-size: 17px;
+  }
+
+  .profile-image {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+}
+
+
+/* =========================
+   375px MOBILE
+========================= */
+
+@media (max-width: 375px) {
+
+  .top-navbar {
+    height: 60px;
+    padding: 0 10px;
+  }
+
+  .navbar-left {
+    gap: 4px;
+  }
+
+  .menu-button {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .brand {
+    font-size: 15px;
+    gap: 4px;
+  }
+
+  .brand-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+  }
+
+  .navbar-actions {
+    gap: 5px;
+  }
+
+  .search-box,
+  .icon-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .profile-image {
+    width: 34px;
+    height: 34px;
+  }
+}

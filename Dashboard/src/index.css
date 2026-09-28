@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+
+  min-height: 100%;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+
+  background: #f7f8fc;
+
+  color: #171717;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.main-content {
+  margin-left: 245px;
+
+  padding: 30px;
+
+  min-height:
+    calc(100vh - 72px);
+}
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1024px) {
+
+  .top-navbar {
+    padding: 0 20px;
+  }
+
+  .sidebar {
+    width: 220px;
+  }
+
+  .main-content {
+    margin-left: 220px;
+
+    padding: 25px 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-box {
+    width: 180px;
+  }
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+
+  .top-navbar {
+    height: 64px;
+
+    padding: 0 15px;
+  }
+
+  .menu-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+  .brand {
+    font-size: 18px;
+  }
+
+  .navbar-actions {
+    gap: 8px;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .profile-name {
+    display: none;
+  }
+
+  .icon-button {
+    background: transparent;
+  }
+
+  /* SIDEBAR */
+
+  .sidebar {
+    top: 0;
+
+    left: -270px;
+
+    width: 270px;
+
+    height: 100vh;
+
+    transition:
+      left 0.3s ease;
+
+    z-index: 2000;
+
+    box-shadow:
+      5px 0 20px
+      rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.sidebar-open {
+    left: 0;
+  }
+
+  .close-sidebar {
+    display: flex;
+
+    cursor: pointer;
+  }
+
+  .sidebar-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+      rgba(0, 0, 0, 0.4);
+
+    z-index: 1500;
+  }
+
+  .sidebar-overlay.show {
+    display: block;
+  }
+
+  /* MAIN */
+
+  .main-content {
+    margin-left: 0;
+
+    padding: 20px 15px;
+  }
+
+  /* DASHBOARD */
+
+  .dashboard-header {
+    align-items: flex-start;
+
+    gap: 15px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 24px;
+  }
+
+  .date-button {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  /* STATS */
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    gap: 10px;
+  }
+
+  .stat-card {
+    padding: 15px;
+  }
+
+  .stat-card h2 {
+    font-size: 18px;
+  }
+
+  .stat-percentage span {
+    display: none;
+  }
+
+  /* CARDS */
+
+  .dashboard-card {
+    padding: 16px;
+  }
+
+  /* CHART */
+
+  .chart {
+    height: 180px;
+  }
+
+  .bar {
+    width: 16px;
+  }
+
+  .chart-labels span:nth-child(even) {
+    display: none;
+  }
+
+  /* CREDIT CARD */
+
+  .credit-card {
+    min-height: 170px;
+  }
+
+  .card-number {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 480px) {
+
+  .brand {
+    font-size: 16px;
+  }
+
+  .brand-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar-actions {
+    gap: 3px;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+
+  .date-button {
+    align-self: stretch;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-card h2 {
+    font-size: 21px;
+  }
+
+  .dashboard-grid {
+    gap: 15px;
+  }
+
+  .dashboard-card {
+    border-radius: 10px;
+  }
+
+  .chart {
+    height: 150px;
+  }
+
+  .bar {
+    width: 12px;
+  }
+
+  .credit-card {
+    min-height: 155px;
+
+    padding: 17px;
+  }
+
+  .card-number {
+    font-size: 12px;
+  }
+
+  .card-bottom strong {
+    font-size: 9px;
+  }
+
+}

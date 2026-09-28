@@ -1,0 +1,1020 @@
+/* =====================================================
+   MY CARDS PAGE
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+.cards-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #26334d;
+}
+
+.cards-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #26334d;
+}
+
+
+/* =====================================================
+   MY CARDS
+===================================================== */
+
+.cards-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.bank-card {
+  height: 135px;
+  border-radius: 16px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff; 
+background-color: #3f5de8; }
+
+
+
+.bank-card:nth-child(3) {
+  background: #ffffff;
+  color: #4c5870;
+  border: 1px solid #edf0f5;
+}
+
+
+/* =====================================================
+   CARD TOP
+===================================================== */
+
+.card-balance {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.balance-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.balance-text small {
+  font-size: 10px;
+  opacity: 0.8;
+}
+
+.balance-text strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-chip {
+  font-size: 21px;
+}
+
+
+/* =====================================================
+   CARD DETAILS
+===================================================== */
+
+.card-information {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.card-holder,
+.card-valid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-information small {
+  font-size: 9px;
+  opacity: 0.8;
+}
+
+.card-information span {
+  font-size: 11px;
+}
+
+
+/* =====================================================
+   CARD NUMBER
+===================================================== */
+
+.card-number {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 42px;
+
+  padding: 11px 16px;
+
+  background: rgba(0, 0, 0, 0.08);
+
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-number .card-logo {
+  font-size: 21px;
+}
+
+
+/* =====================================================
+   TOP CONTENT
+===================================================== */
+
+.cards-middle {
+  display: grid;
+  grid-template-columns: 32% 68%;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   CARD EXPENSE STATISTICS
+===================================================== */
+
+.expense-card {
+  height: 180px;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 16px;
+}
+
+.expense-chart {
+  height: 108px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.donut-chart {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    #17cec0 0deg 90deg,
+    #f65b9b 90deg 180deg,
+    #ffb51c 180deg 270deg,
+    #4677f6 270deg 360deg
+  );
+
+  position: relative;
+}
+
+.donut-chart::after {
+  content: "";
+  position: absolute;
+
+  width: 42px;
+  height: 42px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  background: #ffffff;
+  border-radius: 50%;
+}
+
+
+/* =====================================================
+   CHART LEGEND
+===================================================== */
+
+.chart-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 15px;
+  margin-top: 10px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  font-size: 10px;
+  color: #8794aa;
+}
+
+.legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.legend-blue {
+  background: #4677f6;
+}
+
+.legend-pink {
+  background: #f65b9b;
+}
+
+.legend-green {
+  background: #17cec0;
+}
+
+.legend-yellow {
+  background: #ffb51c;
+}
+
+
+/* =====================================================
+   CARD LIST
+===================================================== */
+
+.card-list {
+  min-width: 0;
+}
+
+.card-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.card-list-row {
+  min-height: 56px;
+
+  background: #ffffff;
+  border-radius: 12px;
+
+  padding: 9px;
+
+  display: grid;
+  grid-template-columns: 35px 1fr 65px 95px 95px 75px 60px;
+
+  align-items: center;
+  gap: 8px;
+
+  font-size: 16px;
+}
+
+
+/* =====================================================
+   LIST ICON
+===================================================== */
+
+.list-icon {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+}
+
+.list-icon.blue {
+  background: #e7edff;
+  color: #4775f5;
+}
+
+.list-icon.pink {
+  background: #ffe5ef;
+  color: #ed6095;
+}
+
+.list-icon.yellow {
+  background: #fff1d5;
+  color: #f4ad18;
+}
+
+
+/* =====================================================
+   LIST TEXT
+===================================================== */
+
+.list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.list-item strong {
+  font-size: 11px;
+  font-weight: 500;
+  color: #34415a;
+}
+
+.list-item span {
+  font-size: 12px;
+  color: #91a0b5;
+}
+
+.view-details {
+  color: #3f5de8;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   BOTTOM SECTION
+===================================================== */
+
+.cards-bottom {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+
+/* =====================================================
+   ADD NEW CARD
+===================================================== */
+
+.add-card-container {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.add-card-description {
+  color: #7e8da6;
+  font-size: 14px;
+  line-height: 1.7;
+
+  max-width: 90%;
+
+  margin-bottom: 16px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.card-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 11px 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 11px;
+  color: #3d4960;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  height: 34px;
+
+  padding: 0 11px;
+
+  border: 1px solid #e3e8f0;
+  border-radius: 8px;
+
+  outline: none;
+
+  color: #8b98ad;
+  background: #ffffff;
+
+  font-size: 11px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4054ef;
+}
+
+
+/* =====================================================
+   ADD CARD BUTTON
+===================================================== */
+
+.add-card-button {
+  margin-top: 16px;
+
+  height: 34px;
+  padding: 0 28px;
+
+  border: none;
+  border-radius: 6px;
+
+  background: #2934f2;
+  color: #ffffff;
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+.add-card-button:hover {
+  background: #2029d8;
+}
+
+
+/* =====================================================
+   CARD SETTINGS
+===================================================== */
+
+.card-settings {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 14px;
+}
+
+.setting-item {
+  min-height: 58px;
+
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  border-bottom: 1px solid #f0f2f6;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-icon {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  flex-shrink: 0;
+}
+
+.setting-icon.yellow {
+  background: #fff1d4;
+  color: #efa915;
+}
+
+.setting-icon.blue {
+  background: #e7edff;
+  color: #416df2;
+}
+
+.setting-icon.pink {
+  background: #ffe5ef;
+  color: #e85b93;
+}
+
+.setting-icon.green {
+  background: #dff9f6;
+  color: #22c8ba;
+}
+
+.setting-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.setting-content strong {
+  font-size: 11px;
+  font-weight: 500;
+  color: #3c485e;
+}
+
+.setting-content span {
+  font-size: 9px;
+  color: #98a5b8;
+}
+
+
+/* =====================================================
+   1440px
+===================================================== */
+
+@media (min-width: 1200px) {
+
+  .cards-page {
+    padding: 20px 30px;
+  }
+
+  .cards-container {
+    gap: 18px;
+  }
+
+  .bank-card {
+    height: 135px;
+  }
+
+  .card-list-row {
+    grid-template-columns:
+      35px
+      1fr
+      65px
+      95px
+      95px
+      75px
+      60px;
+  }
+}
+
+
+/* =====================================================
+   1024px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+  .cards-page {
+    padding: 18px;
+  }
+
+  .cards-title {
+    font-size: 17px;
+  }
+
+  .cards-container {
+    gap: 12px;
+  }
+
+  .bank-card {
+    height: 125px;
+    padding: 14px;
+  }
+
+  .balance-text small {
+    font-size: 9px;
+  }
+
+  .balance-text strong {
+    font-size: 13px;
+  }
+
+  .card-information {
+    margin-top: 15px;
+  }
+
+  .card-information small {
+    font-size: 8px;
+  }
+
+  .card-information span {
+    font-size: 10px;
+  }
+
+  .card-number {
+    font-size: 13px;
+  }
+
+  .cards-middle {
+    grid-template-columns: 30% 70%;
+    gap: 12px;
+  }
+
+  .expense-card {
+    height: 170px;
+    padding: 13px;
+  }
+
+  .donut-chart {
+    width: 90px;
+    height: 90px;
+  }
+
+  .donut-chart::after {
+    width: 36px;
+    height: 36px;
+  }
+
+  .legend-item {
+    font-size: 9px;
+  }
+
+  .card-list-row {
+    grid-template-columns:
+      32px
+      1fr
+      55px
+      75px
+      75px
+      55px
+      45px;
+
+    gap: 5px;
+    padding: 8px;
+
+    font-size: 9px;
+  }
+
+  .list-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .list-item strong {
+    font-size: 10px;
+  }
+
+  .list-item span {
+    font-size: 8px;
+  }
+
+  .view-details {
+    font-size: 9px;
+  }
+
+  .cards-bottom {
+    gap: 12px;
+  }
+
+  .add-card-container {
+    padding: 16px;
+  }
+
+  .add-card-description {
+    font-size: 9px;
+  }
+
+  .form-group label {
+    font-size: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-size: 10px;
+  }
+
+  .setting-item {
+    min-height: 52px;
+  }
+
+  .setting-content strong {
+    font-size: 10px;
+  }
+
+  .setting-content span {
+    font-size: 8px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   768px AND BELOW
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .cards-page {
+    padding: 12px;
+  }
+
+  .cards-title {
+    font-size: 17px;
+  }
+
+
+  /* =========================
+     MY CARDS
+  ========================= */
+
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .bank-card {
+    height: 135px;
+  }
+
+  .balance-text small {
+    font-size: 10px;
+  }
+
+  .balance-text strong {
+    font-size: 14px;
+  }
+
+  .card-information small {
+    font-size: 9px;
+  }
+
+  .card-information span {
+    font-size: 11px;
+  }
+
+  .card-number {
+    font-size: 14px;
+  }
+
+
+  /* =========================
+     MIDDLE
+  ========================= */
+
+  .cards-middle {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  /* =========================
+     EXPENSE
+  ========================= */
+
+  .expense-card {
+    height: 200px;
+  }
+
+  .expense-chart {
+    height: 125px;
+  }
+
+  .donut-chart {
+    width: 105px;
+    height: 105px;
+  }
+
+  .legend-item {
+    font-size: 10px;
+  }
+
+
+  /* =========================
+     CARD LIST
+  ========================= */
+
+  .card-list-container {
+    gap: 8px;
+  }
+
+  .card-list-row {
+    grid-template-columns: 38px 1fr auto;
+
+    min-height: 66px;
+
+    padding: 9px 10px;
+  }
+
+  .card-list-row > span:nth-child(3),
+  .card-list-row > span:nth-child(4),
+  .card-list-row > span:nth-child(5) {
+    display: none;
+  }
+
+  .list-item strong {
+    font-size: 11px;
+  }
+
+  .list-item span {
+    font-size: 9px;
+  }
+
+  .view-details {
+    font-size: 9px;
+  }
+
+
+  /* =========================
+     BOTTOM
+  ========================= */
+
+  .cards-bottom {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+
+  /* =========================
+     FORM
+  ========================= */
+
+  .card-form {
+    grid-template-columns: 1fr;
+    gap: 11px;
+  }
+
+  .add-card-description {
+    max-width: 100%;
+    font-size: 10px;
+  }
+
+  .form-group label {
+    font-size: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 36px;
+    font-size: 10px;
+  }
+
+  .add-card-button {
+    height: 36px;
+    font-size: 11px;
+  }
+
+
+  /* =========================
+     SETTINGS
+  ========================= */
+
+  .card-settings {
+    padding: 11px 12px;
+  }
+
+  .setting-item {
+    min-height: 58px;
+  }
+
+  .setting-content strong {
+    font-size: 11px;
+  }
+
+  .setting-content span {
+    font-size: 9px;
+  }
+}
+
+
+/* =====================================================
+   375px
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .cards-page {
+    padding: 10px;
+  }
+
+  .cards-title {
+    font-size: 16px;
+    margin-bottom: 9px;
+  }
+
+
+  /* =========================
+     BANK CARD
+  ========================= */
+
+  .bank-card {
+    height: 130px;
+    border-radius: 14px;
+    padding: 14px;
+  }
+
+  .balance-text small {
+    font-size: 9px;
+  }
+
+  .balance-text strong {
+    font-size: 13px;
+  }
+
+  .card-information small {
+    font-size: 8px;
+  }
+
+  .card-information span {
+    font-size: 10px;
+  }
+
+  .card-number {
+    font-size: 13px;
+  }
+
+
+  /* =========================
+     EXPENSE
+  ========================= */
+
+  .expense-card {
+    height: 190px;
+    padding: 13px;
+  }
+
+  .donut-chart {
+    width: 95px;
+    height: 95px;
+  }
+
+  .donut-chart::after {
+    width: 38px;
+    height: 38px;
+  }
+
+  .legend-item {
+    font-size: 9px;
+  }
+
+
+  /* =========================
+     CARD LIST
+  ========================= */
+
+  .card-list-row {
+    grid-template-columns: 34px 1fr auto;
+    gap: 8px;
+  }
+
+  .list-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .list-item strong {
+    font-size: 10px;
+  }
+
+  .list-item span {
+    font-size: 8px;
+  }
+
+  .view-details {
+    font-size: 8px;
+  }
+
+
+  /* =========================
+     ADD CARD
+  ========================= */
+
+  .add-card-container {
+    padding: 14px;
+  }
+
+  .add-card-description {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  .form-group label {
+    font-size: 9px;
+  }
+
+  .form-group input,
+  .form-group select {
+    height: 35px;
+    font-size: 9px;
+  }
+
+  .add-card-button {
+    width: 100%;
+    height: 35px;
+    font-size: 10px;
+  }
+
+
+  /* =========================
+     SETTINGS
+  ========================= */
+
+  .setting-item {
+    min-height: 56px;
+  }
+
+  .setting-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .setting-content strong {
+    font-size: 10px;
+  }
+
+  .setting-content span {
+    font-size: 8px;
+  }
+}

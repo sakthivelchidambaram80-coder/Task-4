@@ -1,0 +1,162 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 250px;
+  height: 100vh;
+
+  background: #ffffff;
+
+  z-index: 1100;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+
+  overflow-y: auto;
+}
+
+.sidebar.sidebar-open {
+  transform: translateX(0);
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+
+  z-index: 1050;
+}
+
+.sidebar-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.sidebar-header {
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  padding: 0 15px;
+}
+
+.close-sidebar {
+  border: none;
+  background: transparent;
+
+  font-size: 24px;
+
+  cursor: pointer;
+
+  color: #343c6a;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+
+  padding: 10px 15px;
+  gap: 6px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 13px 15px;
+
+  color: #6b6f80;
+
+  text-decoration: none;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+.sidebar-item:hover {
+  background: #f5f6fa;
+  color: #343c6a;
+  border-left: solid 4px  #343c6a;
+}
+
+.sidebar-item.active {
+  background: #eef1ff;
+  color: #343c6a;
+}
+
+.sidebar-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 769px) {
+
+  .sidebar {
+    transform: translateX(0);
+
+    position: fixed;
+    top: 72px;
+  }
+
+  .sidebar-overlay {
+    display: none;
+  }
+
+  .close-sidebar {
+    display: none;
+  }
+}
+
+
+/* =========================
+   MOBILE / TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .sidebar {
+    top: 0;
+    width: 250px;
+  }
+
+  .sidebar-overlay.show {
+    display: block;
+  }
+}

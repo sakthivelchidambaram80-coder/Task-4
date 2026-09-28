@@ -1,0 +1,1056 @@
+/* =========================================
+   DASHBOARD MAIN
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+.dashboard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2544;
+}
+
+
+/* =========================================
+   COMMON SECTION HEADING
+========================================= */
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 28px;
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #20264a;
+}
+
+.see-all {
+  border: none;
+  background: transparent;
+  color: #9090a0;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+/* =========================================
+   TOP SECTION
+========================================= */
+
+.dashboard-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+
+/* =========================================
+   MY CARDS
+========================================= */
+
+.cards-section {
+  min-width: 0;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+
+/* =========================================
+   FIRST CARD
+========================================= */
+
+.bank-card {
+  height: 150px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  padding: 16px 17px 0;
+}
+
+.primary-card {
+  background: #3434f0;
+  color: white;
+}
+
+
+/* =========================================
+   FIRST CARD - TOP
+========================================= */
+
+.primary-card .card-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.primary-card .card-label {
+  display: block;
+  font-size: 7px;
+  margin-bottom: 3px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.primary-card .card-balance {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: white;
+}
+
+.primary-card .card-chip {
+  font-size: 23px;
+  color: white;
+}
+
+
+/* =========================================
+   FIRST CARD - DETAILS
+========================================= */
+
+.primary-card .card-details {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  margin-top: 18px;
+}
+
+.primary-card .card-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-card .card-details strong {
+  font-size: 9px;
+  font-weight: 500;
+  color: white;
+}
+
+
+/* =========================================
+   FIRST CARD - NUMBER
+========================================= */
+
+.primary-card .card-number {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 17px;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  background: rgba(250, 249, 249, 0.08);
+  color: rgb(251, 251, 251);
+}
+
+
+/* =========================================
+   FIRST CARD - MASTERCARD
+========================================= */
+
+.primary-card .master-circle {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 35px;
+  height: 22px;
+}
+
+.primary-card .master-circle i {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.primary-card .master-circle i:first-child {
+  left: 0;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.primary-card .master-circle i:last-child {
+  left: 11px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================
+   SECOND CARD
+========================================= */
+
+.bank-card-secondary-card {
+  width: 100%;
+  height: 250px;
+
+  background: #ffffff;
+
+  border: 1px solid #e6e9f0;
+  border-radius: 18px;
+
+  padding: 17px 18px 0;
+
+  color: #343b65;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SECOND CARD - TOP ROW
+========================================= */
+
+.bank-card-secondary-card .card-top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+/* =========================================
+   SECOND CARD - LABEL
+========================================= */
+
+.bank-card-secondary-card .card-label {
+  display: block;
+
+  font-size: 8px;
+  font-weight: 400;
+
+  color: #9ba3b7;
+
+  margin-bottom: 2px;
+}
+
+
+/* =========================================
+   SECOND CARD - BALANCE
+========================================= */
+
+.bank-card-secondary-card .card-balance {
+  display: block;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  color: #343b65;
+}
+
+
+/* =========================================
+   SECOND CARD - ICON
+========================================= */
+
+.bank-card-secondary-card .card-chip.dark {
+  font-size: 23px;
+  color: #333333;
+}
+
+
+/* =========================================
+   SECOND CARD - DETAILS
+========================================= */
+
+.bank-card-secondary-card .card-details {
+  display: flex;
+
+  gap: 65px;
+
+  width: auto;
+
+  margin-top: 17px;
+}
+
+.bank-card-secondary-card .card-details div {
+  display: flex;
+  flex-direction: column;
+}
+
+.bank-card-secondary-card .card-details strong {
+  display: block;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  color: #343b65;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   SECOND CARD - NUMBER
+========================================= */
+
+.bank-card-secondary-card .card-number {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 17px;
+
+  background: #f8f9fc;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #4c557c;
+}
+
+
+/* =========================================
+   SECOND CARD - MASTERCARD
+========================================= */
+
+.bank-card-secondary-card .master-circle {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  width: 31px;
+  height: 20px;
+
+  flex-shrink: 0;
+}
+
+.bank-card-secondary-card .master-circle i {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border-radius: 50%;
+}
+
+.bank-card-secondary-card .master-circle i:first-child {
+  left: 0;
+  background: #c5cad8;
+}
+
+.bank-card-secondary-card .master-circle i:last-child {
+  left: 10px;
+  background: #aeb5c7;
+  opacity: 0.8;
+}
+
+
+/* =========================================
+   RECENT TRANSACTION
+========================================= */
+
+.recent-section {
+  min-width: 0;
+}
+
+.recent-card {
+  height: 250px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  padding: 12px 15px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.transaction {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 0;
+}
+
+.transaction-icon {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-size: 15px;
+}
+
+.transaction-icon.card {
+  background: #fff4dc;
+  color: #f3ad24;
+}
+
+.transaction-icon.paypal {
+  background: #edf0ff;
+  color: #5061e8;
+}
+
+.transaction-icon.user {
+  background: #dcfaf7;
+  color: #23c7bf;
+}
+
+.paypal {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+.transaction-info strong {
+  font-size: 10px;
+  font-weight: 500;
+
+  color: #30354e;
+
+  white-space: nowrap;
+}
+
+.transaction-info span {
+  margin-top: 4px;
+
+  font-size: 8px;
+
+  color: #9ba5c8;
+}
+
+.transaction-amount {
+  font-size: 10px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.transaction-amount.expense {
+  color: #ff5c5c;
+}
+
+.transaction-amount.income {
+  color: #19c9a5;
+}
+
+
+/* =========================================
+   MIDDLE SECTION
+========================================= */
+
+.dashboard-middle {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 18px;
+
+  margin-bottom: 14px;
+}
+
+
+/* =========================================
+   CHART CARD
+========================================= */
+
+.chart-card {
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  height: 205px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   WEEKLY ACTIVITY
+========================================= */
+
+.chart-legend {
+  position: absolute;
+
+  right: 18px;
+  top: 14px;
+
+  display: flex;
+
+  gap: 18px;
+
+  z-index: 5;
+
+  font-size: 9px;
+
+  color: #7d86a7;
+}
+
+.chart-legend span {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.chart-legend i {
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+
+  display: inline-block;
+}
+
+.deposit-dot {
+  background: #20cec6;
+}
+
+.withdraw-dot {
+  background: #f27ba8;
+}
+
+.weekly-chart {
+  width: 100%;
+  height: 100%;
+
+  padding: 35px 12px 5px 5px;
+}
+
+
+/* =========================================
+   EXPENSE STATISTICS
+========================================= */
+
+.chart-card-expense-card {
+  height: 305px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.chart-card-expense-card .recharts-responsive-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/* =========================================
+   PIE CHART LABEL
+========================================= */
+
+.recharts-pie-label-text {
+  font-size: 9px;
+
+  font-weight: 600;
+
+  fill: white;
+}
+
+
+/* =========================================
+   BOTTOM SECTION
+========================================= */
+
+.dashboard-bottom {
+  display: grid;
+
+  grid-template-columns: 1fr 1.5fr;
+
+  gap: 18px;
+}
+
+
+/* =========================================
+   QUICK TRANSFER
+========================================= */
+
+.transfer-card {
+  height: 275px;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  padding: 20px 15px 12px;
+}
+
+.people-row {
+  display: flex;
+
+  align-items: center;
+  margin-top: 20px;
+
+  gap: 15px;
+}
+
+.person {
+  width: 65px;
+
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.person img {
+  width: 42px;
+  height: 42px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin-bottom: 5px;
+}
+
+.person strong {
+  width: 70px;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  color: #30354e;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.person span {
+  margin-top: 3px;
+
+  font-size: 7px;
+
+  color: #9ba5c8;
+}
+
+
+/* =========================================
+   NEXT PERSON BUTTON
+========================================= */
+
+.next-person {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+
+  color: #9ba5c8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  margin-left: auto;
+}
+
+.next-person svg {
+  font-size: 17px;
+}
+
+
+/* =========================================
+   TRANSFER FORM
+========================================= */
+
+.transfer-form {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 60px;
+}
+
+.transfer-form > span {
+  font-size: 8px;
+
+  color: #9ba5c8;
+
+  white-space: nowrap;
+}
+
+.amount-box {
+  height: 32px;
+
+  flex: 1;
+
+  border-radius: 18px;
+
+  background: #f1f3f8;
+
+  color: #9ba5c8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 10px;
+}
+
+.send-button {
+  height: 32px;
+
+  min-width: 78px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: #2525ed;
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: 500;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  cursor: pointer;
+}
+
+.send-button svg {
+  font-size: 13px;
+}
+
+
+/* =========================================
+   BALANCE HISTORY
+========================================= */
+
+.balance-chart {
+  height: 174px;
+
+  padding: 12px 10px 5px 5px;
+}
+
+.balance-chart .recharts-responsive-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/* =========================================
+   RECHARTS
+========================================= */
+
+.recharts-wrapper {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 9px;
+}
+
+.recharts-tooltip-wrapper {
+  outline: none;
+}
+
+
+/* =========================================
+   RESPONSIVE - 1200px
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .dashboard {
+    padding: 15px;
+  }
+
+  .dashboard-top,
+  .dashboard-middle {
+    grid-template-columns: 1.8fr 1fr;
+
+    gap: 15px;
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: 1fr 1.4fr;
+
+    gap: 15px;
+  }
+
+  .cards-wrapper {
+    gap: 12px;
+  }
+
+  .people-row {
+    gap: 8px;
+  }
+
+  .person {
+    width: 58px;
+  }
+
+  .bank-card-secondary-card .card-details {
+    gap: 40px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 900px
+========================================= */
+
+@media (max-width: 900px) {
+
+  .dashboard-top,
+  .dashboard-middle,
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .recent-card {
+    height: auto;
+
+    min-height: 150px;
+  }
+
+  .chart-card,
+  .chart-card-expense-card {
+    height: 250px;
+  }
+
+  .transfer-card {
+    height: auto;
+
+    min-height: 174px;
+  }
+
+  .balance-chart {
+    height: 250px;
+  }
+
+  .bank-card-secondary-card .card-details {
+    gap: 65px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+  .dashboard {
+    padding: 10px;
+  }
+
+  .section-heading h2 {
+    font-size: 14px;
+  }
+
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .bank-card,
+  .bank-card-secondary-card {
+    height: 165px;
+  }
+
+  .cards-section,
+  .recent-section,
+  .dashboard-middle section,
+  .dashboard-bottom section {
+    width: 100%;
+  }
+
+  .chart-card,
+  .chart-card-expense-card {
+    height: 240px;
+  }
+
+  .people-row {
+    justify-content: space-between;
+
+    gap: 5px;
+  }
+
+  .person {
+    width: 60px;
+  }
+
+  .next-person {
+    width: 30px;
+    height: 30px;
+  }
+
+  .transfer-form {
+    flex-wrap: wrap;
+  }
+
+  .transfer-form > span {
+    width: 100%;
+
+    margin-bottom: 3px;
+  }
+
+  .amount-box {
+    min-width: 120px;
+  }
+
+  .send-button {
+    min-width: 75px;
+  }
+
+  .bank-card-secondary-card .card-details {
+    gap: 50px;
+  }
+
+  .bank-card-secondary-card .card-number {
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - 400px
+========================================= */
+
+@media (max-width: 400px) {
+
+  .dashboard {
+    padding: 8px;
+  }
+
+  .bank-card,
+  .bank-card-secondary-card {
+    height: 155px;
+  }
+
+  .primary-card .card-details {
+    width: 85%;
+  }
+
+  .primary-card .card-number {
+    font-size: 11px;
+  }
+
+  .bank-card-secondary-card .card-details {
+    gap: 35px;
+  }
+
+  .bank-card-secondary-card .card-number {
+    font-size: 11px;
+  }
+
+  .transaction-info strong {
+    font-size: 9px;
+  }
+
+  .transaction-amount {
+    font-size: 9px;
+  }
+
+  .chart-legend {
+    right: 10px;
+
+    gap: 8px;
+  }
+
+  .people-row {
+    gap: 2px;
+  }
+
+  .person {
+    width: 55px;
+  }
+
+  .person img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .person strong {
+    font-size: 7px;
+  }
+
+  .person span {
+    font-size: 6px;
+  }
+
+  .transfer-form {
+    gap: 5px;
+  }
+
+  .amount-box {
+    font-size: 9px;
+  }
+
+  .send-button {
+    min-width: 65px;
+  }
+}

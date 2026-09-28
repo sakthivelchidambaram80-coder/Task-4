@@ -1,0 +1,561 @@
+/* =====================================================
+   LOANS PAGE
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+.loans-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background: #f5f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #26334d;
+}
+
+
+/* =====================================================
+   LOAN SUMMARY
+===================================================== */
+
+.loan-summary {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.loan-summary-card {
+  min-height: 90px;
+  background: #ffffff;
+  border-radius: 14px;
+
+  padding: 18px;
+
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  border: 1px solid #edf0f5;
+}
+
+
+/* =====================================================
+   LOAN ICON
+===================================================== */
+
+.loan-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.loan-icon.blue {
+  background: #e7edff;
+  color: #4775f5;
+}
+
+.loan-icon.yellow {
+  background: #fff1d5;
+  color: #f4ad18;
+}
+
+.loan-icon.pink {
+  background: #ffe5ef;
+  color: #e85b93;
+}
+
+.loan-icon.green {
+  background: #dff9f6;
+  color: #22c8ba;
+}
+
+
+/* =====================================================
+   SUMMARY CONTENT
+===================================================== */
+
+.loan-summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.loan-summary-content p {
+  margin: 0;
+
+  font-size: 12px;
+  color: #8996aa;
+
+  white-space: nowrap;
+}
+
+.loan-summary-content h3 {
+  margin: 0;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #26334d;
+}
+
+
+/* =====================================================
+   ACTIVE LOANS SECTION
+===================================================== */
+
+.active-loans-section {
+  width: 100%;
+}
+
+.loans-title {
+  margin: 0 0 14px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #26334d;
+}
+
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.loan-table-wrapper {
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 15px;
+
+  padding: 8px;
+
+  overflow-x: auto;
+
+  border: 1px solid #edf0f5;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.loan-table {
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+
+  font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+.loan-table thead tr {
+  border-bottom: 1px solid #edf0f5;
+}
+
+.loan-table th {
+  padding: 15px 12px;
+
+  text-align: left;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  color: #7e8ca2;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+.loan-table td {
+  padding: 15px 12px;
+
+  font-size: 12px;
+
+  color: #4c5870;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid #f1f3f7;
+}
+
+.loan-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =====================================================
+   TABLE HOVER
+===================================================== */
+
+.loan-table tbody tr:not(.loan-total):hover {
+  background: #fafbfe;
+}
+
+
+/* =====================================================
+   TOTAL ROW
+===================================================== */
+
+.loan-table .loan-total {
+  background: #fafbff;
+}
+
+.loan-table .loan-total td {
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #34415a;
+
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+
+/* =====================================================
+   REPAY BUTTON
+===================================================== */
+
+.repay-button {
+  min-width: 70px;
+  height: 32px;
+
+  padding: 0 15px;
+
+  border: 1px solid #4054ef;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #4054ef;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.repay-button:hover {
+  background: #4054ef;
+  color: #ffffff;
+}
+
+
+/* =====================================================
+   1440px
+===================================================== */
+
+@media (min-width: 1200px) {
+
+  .loans-page {
+    padding: 20px 30px;
+  }
+
+  .loan-summary {
+    gap: 18px;
+  }
+
+  .loan-summary-card {
+    min-height: 95px;
+    padding: 20px;
+  }
+
+  .loan-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 21px;
+  }
+
+  .loan-summary-content p {
+    font-size: 13px;
+  }
+
+  .loan-summary-content h3 {
+    font-size: 18px;
+  }
+
+  .loans-title {
+    font-size: 19px;
+  }
+
+  .loan-table th {
+    font-size: 12px;
+  }
+
+  .loan-table td {
+    font-size: 13px;
+  }
+
+  .loan-table .loan-total td {
+    font-size: 13px;
+  }
+
+  .repay-button {
+    font-size: 12px;
+  }
+}
+
+
+/* =====================================================
+   1024px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 1199px) {
+
+  .loans-page {
+    padding: 18px;
+  }
+
+  .loan-summary {
+    gap: 12px;
+  }
+
+  .loan-summary-card {
+    min-height: 85px;
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .loan-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+    border-radius: 10px;
+  }
+
+  .loan-summary-content p {
+    font-size: 10px;
+  }
+
+  .loan-summary-content h3 {
+    font-size: 15px;
+  }
+
+  .loans-title {
+    font-size: 17px;
+  }
+
+  .loan-table {
+    min-width: 800px;
+  }
+
+  .loan-table th {
+    padding: 13px 10px;
+    font-size: 10px;
+  }
+
+  .loan-table td {
+    padding: 13px 10px;
+    font-size: 11px;
+  }
+
+  .loan-table .loan-total td {
+    font-size: 11px;
+  }
+
+  .repay-button {
+    min-width: 62px;
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+   768px AND BELOW
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .loans-page {
+    padding: 12px;
+  }
+
+
+  /* =========================
+     SUMMARY
+  ========================= */
+
+  .loan-summary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .loan-summary-card {
+    min-height: 85px;
+    padding: 14px;
+  }
+
+  .loan-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+
+  .loan-summary-content p {
+    font-size: 10px;
+  }
+
+  .loan-summary-content h3 {
+    font-size: 15px;
+  }
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .loans-title {
+    font-size: 17px;
+    margin-bottom: 12px;
+  }
+
+
+  /* =========================
+     TABLE
+  ========================= */
+
+  .loan-table-wrapper {
+    padding: 6px;
+    border-radius: 12px;
+  }
+
+  .loan-table {
+    min-width: 800px;
+  }
+
+  .loan-table th {
+    padding: 13px 10px;
+    font-size: 10px;
+  }
+
+  .loan-table td {
+    padding: 13px 10px;
+    font-size: 11px;
+  }
+
+  .loan-table .loan-total td {
+    font-size: 11px;
+  }
+
+  .repay-button {
+    height: 30px;
+    font-size: 10px;
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+   390px AND BELOW
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .loans-page {
+    padding: 10px;
+  }
+
+
+  /* =========================
+     SUMMARY
+  ========================= */
+
+  .loan-summary {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .loan-summary-card {
+    min-height: 78px;
+    padding: 13px;
+    gap: 12px;
+  }
+
+  .loan-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .loan-summary-content p {
+    font-size: 11px;
+  }
+
+  .loan-summary-content h3 {
+    font-size: 15px;
+  }
+
+
+  /* =========================
+     TITLE
+  ========================= */
+
+  .loans-title {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+
+  /* =========================
+     TABLE
+  ========================= */
+
+  .loan-table-wrapper {
+    padding: 5px;
+    border-radius: 11px;
+  }
+
+  .loan-table {
+    min-width: 760px;
+  }
+
+  .loan-table th {
+    padding: 12px 9px;
+    font-size: 10px;
+  }
+
+  .loan-table td {
+    padding: 12px 9px;
+    font-size: 10px;
+  }
+
+  .loan-table .loan-total td {
+    font-size: 10px;
+  }
+
+  .repay-button {
+    min-width: 58px;
+    height: 29px;
+    padding: 0 12px;
+    font-size: 10px;
+  }
+}
